@@ -57,12 +57,11 @@ let store_obj source (data : 'a) =
 	let file = source ^ __obj in
     try
         let tmp = Printf.sprintf "%s.%d" file (Unix.getpid ()) in
-        let oc = open_out_gen [Open_wronly; Open_binary; Open_creat; Open_trunc] 0o600 tmp in
+        let oc = open_out_gen [Open_wronly; Open_binary; Open_creat; Open_trunc] 0o666 tmp in
         let obj = make_obj data
         in
             Marshal.to_channel oc obj [];
             close_out oc;
-            Unix.chmod tmp 0o666;
             Unix.rename tmp file
 
     with Unix.Unix_error (e, _, _) ->

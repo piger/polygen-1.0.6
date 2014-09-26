@@ -150,10 +150,14 @@ let main source =
             done;
 
             (* store compiled grammar *)
-            try
-            	msg "storing compiled grammar...";
-            	store_obj source decls
-            with Failure s -> msg s
+	    if (Sys.file_exists(source^".o") = false)
+	    then
+	    begin
+                try
+            	    msg "storing compiled grammar...";
+            	    store_obj source decls
+                with Failure s -> msg s
+	    end
 ;;
 
 

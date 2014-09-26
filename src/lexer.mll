@@ -24,12 +24,7 @@ rule quote = parse
                       let c = String.make 1 (char_of_int (int_of_string s))
                       in
                           c ^ (quote lexbuf) }
-
-  | ['a'-'z' 'A'-'Z' '0'-'9' '!' '£' '$' '%' '&' '/' '(' ')' '=' '?' '^' '\''
-     '[' ']' '*' '+' '@' '#' '<' '>' ',' '.' '-' ';' ':' '_' '{' '}' '`' '~'
-     '|' ' ']       { let s = Lexing.lexeme lexbuf in s ^ (quote lexbuf) }
-
-  | _                { raise (Failure ("illegal character '" ^ (String.escaped (Lexing.lexeme lexbuf)) ^ "' within quote")) }
+  | _               { let s = Lexing.lexeme lexbuf in s ^ (quote lexbuf) }
 
 and comment = parse
     "*)"            { token lexbuf }
