@@ -1,0 +1,7 @@
+*.cm[ix]
+*.o
+src/lexer.ml
+src/parser.ml
+src/parser.mli
+src/ver.ml
+src/polygen
