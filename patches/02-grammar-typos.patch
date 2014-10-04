@@ -1,0 +1,11 @@
+--- polygen//grm/eng/manager.grm	2010-06-22 20:41:57.000000000 +0200
++++ polygen.new//grm/eng/manager.grm	2010-06-22 21:15:58.000000000 +0200
+@@ -54,7 +54,7 @@
+ 
+ Noun ::= systems | tools | controls | applications | projects | engines
+       |  services | providers | portals | [application] servers | solutions | strategies
+-      |  architectures | tecnologies | politicies
++      |  architectures | technologies | politicies
+ ;
+ 
+ Adjective ::= Internet [^"-"^(based | oriented | like | native | mobile)] [Genitive]
