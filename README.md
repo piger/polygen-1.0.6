@@ -1,4 +1,7 @@
-# Polygen
+# The TRUE Polygen
+You can now check out the original project: https://github.com/alvisespano/Polygen !
+
+# Mirror of Polygen 1.0.6
 
 This repository contains a copy of [Polygen 1.0.6](http://www.polygen.org/dist/polygen-1.0.6-20040628-src.zip) patched with
 all the [Debian patches](http://sources.debian.net/src/polygen/1.0.6.ds2-13/debian/patches/) applied (as of version `1.0.6.ds2-13`).
